@@ -55,6 +55,15 @@ typedef struct alias_s
 	struct alias_s *next;
 } alias_t;
 
+typedef struct {
+    int readDescriptor;
+} info_t;
+
+int isInteractive(info_t *shellInfo);
+int isDelimiter(char character, char *delimiterStr);
+int isAlphabetic(int character);
+int stringToInteger(char *inputString);
+
 /* Global aliases linked list */
 alias_t *aliases;
 
